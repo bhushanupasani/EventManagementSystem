@@ -4,6 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 export default function AddService() {
   const navigate = useNavigate();
   const id = useParams();
+  console.log(id);
   const init = {
     id: 1,
     name: "",

@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 
 export default function BusinessComp() {
   const [services, setServices] = useState([]);
+  const [business,setBusiness] = useState({})
+
   const id = JSON.parse(localStorage.getItem("loggedUser"));
 
   const getServices = () => {
@@ -12,13 +14,20 @@ export default function BusinessComp() {
       .then((services) => setServices(services));
   };
 
+  const getBusiness = ((id) => {
+    fetch(`https://localhost:7176/getbusinessbylogin/${id.id}`)
+    .then(resp => resp.json())
+    .then(business => setBusiness(business))
+    console.log(business)
+  })
+
   useEffect(() => {
     getServices();
+    getBusiness(id)
   }, []);
 
   const deleteService = async (id) => {
     console.log("Item deleted");
-    console.log(id);
     await axios.delete(`https://localhost:7176/api/BuisnessServices/${id}`);
     getServices();
   };
@@ -51,9 +60,6 @@ export default function BusinessComp() {
                 Price
               </th>
               <th style={{ border: "1px solid #ccc" }} scope="col">
-                Actions
-              </th>
-              <th style={{ border: "1px solid #ccc" }} scope="col">
                 Delete
               </th>
             </tr>
@@ -65,14 +71,7 @@ export default function BusinessComp() {
                 <td style={{ border: "1px solid #ccc" }}>{v.name}</td>
                 <td style={{ border: "1px solid #ccc" }}>{v.description}</td>
                 <td style={{ border: "1px solid #ccc" }}>{v.price}</td>
-                <td>
-                  <Link
-                    to={`/bservice/${v.id}`}
-                    className="btn btn-outline-primary mx-2"
-                  >
-                    Choose
-                  </Link>
-                </td>
+                
                 <td>
                   <button
                     className="btn btn-outline-primary mx-2"
@@ -88,7 +87,7 @@ export default function BusinessComp() {
       </div>
 
       <div>
-        <Link to={`/addservice/${id}`} className="btn btn-outline-primary mx-2">
+        <Link to={`/addservice/${business.id}`} className="btn btn-outline-primary mx-2">
           Add New Service
         </Link>
       </div>

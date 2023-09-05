@@ -74,7 +74,7 @@ function App() {
         <Route path="/servicess" element={<AdminBusinesssComp />} />
         <Route path="/allservices" element={<AdminBusinessServiceComp />} />
         <Route path="/business" element={<BusinessComp />} />
-        <Route path="/addservice" element={<AddService/>} />
+        <Route path="/addservice/:id" element={<AddService/>} />
       </Routes>
     </div>
   );
