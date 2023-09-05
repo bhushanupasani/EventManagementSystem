@@ -4,10 +4,18 @@ import './App.css';
 import { Link, Route, Routes} from 'react-router-dom';
 import LoginComp from './Components/LoginComp';
 import Home from './Components/homepageComp';
-import Login2 from './Components/lopgin';
 import Business from './Components/BusinessComp';
 import ClientRegister from './Components/CRegister';
 import BusinessRegister from './Components/BRegister';
+import ClientComp from './Components/ClientComp';
+import SuccessfulReg from './Components/SuccessfulRegComp';
+import DecorationComp from './Components/Decoration';
+import CateringComp from './Components/CateringComp';
+import VenueComp from './Components/VenueComp';
+import BServiceComp from './Components/BServiceComp';
+import BuyWindow from './Components/Buy';
+import Payments from './Components/Payement';
+import About from './Components/About';
 
 function App() {
   return (
@@ -16,7 +24,7 @@ function App() {
    <div className="App">
       <header className="header container-fluid">
     <div>
-      <h1 style={{backgroundColor:'red'}}>Welcome to EventManagmentSystem</h1>
+      <h1 style={{backgroundColor:'red'}}>Welcome to Event Managment System</h1>
     </div>
 
 
@@ -28,17 +36,13 @@ function App() {
                   <Link to="/" className="nav-link px-3">Home</Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/login" className="nav-link px-3">Login</Link>
+                  <Link to="/" className="nav-link px-3">Login</Link>
                 </li>
+               
                 <li className="nav-item">
-                  <Link to="/register" className="nav-link px-3">Register</Link>
+                  <Link to="/about" className="nav-link px-3">About</Link>
                 </li>
-                <li className="nav-item">
-                  <Link to="/" className="nav-link px-3">About</Link>
-                </li>
-                <li className="nav-item">
-                  <Link to="/business" className="nav-link px-3  ">Business</Link>
-                </li>
+            
               </ul>
 
             </div>
@@ -50,14 +54,21 @@ function App() {
 </header>
 <Routes>
         {/* <Route path="/login" element={<Login2/>}/> */}
-        <Route path="/login" element={<LoginComp/>}/>
+        <Route path="/" element={<LoginComp/>}/>
 
-        <Route path="/" element={<Home/>}/>
+        {/* <Route path="/" element={<Home/>}/> */}
         <Route path="/business" element={<Business/>}/>
         <Route path="/cregister" element={<ClientRegister/>}/>
         <Route path="/bregister" element={<BusinessRegister/>}/>
-       
-
+       <Route path="/clientpage" element={<ClientComp/>}/>
+       <Route path="/SuccessReg" element={<SuccessfulReg/>}/>
+       <Route path="decoration" element={<DecorationComp/>}/>
+       <Route path="/catering" element={<CateringComp/>}/>
+       <Route path="/venue" element={<VenueComp/>}/>
+       <Route path="/bservice/:id" element={<BServiceComp/>}/>
+       <Route path='/buy/:id' element={<BuyWindow/>}/>
+        <Route path='/payments' element={<Payments/>}/>
+        <Route path='/about' element={<About/>}/>
  </Routes>
 </div>
 

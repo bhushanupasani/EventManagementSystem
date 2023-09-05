@@ -42,7 +42,7 @@ export default function ClientRegister()
         .then(resp => {
             if(resp!=null)
             {
-            console.log(resp);
+           navigate("/SuccessReg");
             }
             
          }) }
@@ -114,7 +114,7 @@ export default function ClientRegister()
                     <input type="text" className="form-control" id="state" name="state" value={info.state}
                      onChange={(e)=>{dispatch({type:'update',fld:'state', val: e.target.value})}}/>
                     <div id="emailHelp" className="form-text"> .... </div>
-                    <p>{JSON.stringify(info)}</p>
+                    {/* <p>{JSON.stringify(info)}</p> */}
                 </div>
                 <button type="submit" className="btn btn-primary mb-3" onClick={(e)=>{sendData(e)}}>register</button> 
                                         

@@ -15,24 +15,7 @@ function Home(){
         <h1>Welcome to EventManagmentSystem</h1>
         <h4>We are here to provide services and best to clients</h4>
 
-        <table border={1}  >
-         {
-            allservice.map(v=>(
-                <tr >
-                    <td style={{color:'red'}}>
-                        {v.categoryName}
-                    </td>
-                    <td>   |</td>
-                    <td>   |</td>
-                    <td style={{color:'yellow'}}>
-                        {v.categoryDescription}
-                    </td>
-
-                    
-                </tr>
-            ))
-         }
-         </table>
+      
         </div>
     );
 }
