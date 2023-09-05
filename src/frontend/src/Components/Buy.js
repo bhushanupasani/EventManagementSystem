@@ -3,7 +3,6 @@ import axios from "axios";
 import { Link, useParams } from "react-router-dom";
 
 export default function BuyWindow() {
-
   const [buy, setBuy] = useState({
     name: "",
     description: "",

@@ -14,12 +14,18 @@ import BServiceComp from "./Components/BServiceComp";
 import BuyWindow from "./Components/Buy";
 import Payments from "./Components/Payement";
 import About from "./Components/About";
-import Admin from "./Components/Admin";
+import Admin from "./Components/AdminManage";
 import AdminClientsComp from "./Components/AdminClients";
 import AdminBusinesssComp from "./Components/AdminService";
 import AdminBusinessServiceComp from "./Components/AdminBusinessService";
 import BusinessComp from "./Components/BusinessComp";
 import AddService from "./Components/AddService";
+import AdminHome from "./Components/AdminHome";
+import GetAllClients from "./Components/GetAllClients";
+import GetAllBusiness from "./Components/GetAllBusiness";
+import GetAllServices from "./Components/GetAllServices";
+import AdminManage from "./Components/AdminManage";
+import AllInfo from "./Components/AllInfo";
 
 function App() {
   return (
@@ -48,6 +54,11 @@ function App() {
                   About
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link to="/adminhome" className="nav-link px-3">
+                  Admin Home
+                </Link>
+              </li>
             </ul>
           </div>
         </nav>
@@ -69,12 +80,17 @@ function App() {
         <Route path="/buy/:id" element={<BuyWindow />} />
         <Route path="/payments" element={<Payments />} />
         <Route path="/about" element={<About />} />
-        <Route path="/admin" element={<Admin />} />
+        <Route path="/adminhome" element={<AdminHome />} />
         <Route path="/clientss" element={<AdminClientsComp />} />
         <Route path="/servicess" element={<AdminBusinesssComp />} />
         <Route path="/allservices" element={<AdminBusinessServiceComp />} />
         <Route path="/business" element={<BusinessComp />} />
-        <Route path="/addservice/:id" element={<AddService/>} />
+        <Route path="/addservice/:id" element={<AddService />} />
+        <Route path="/getallclients" element={<GetAllClients />} />
+        <Route path="/getallbusiness" element={<GetAllBusiness />} />
+        <Route path="/getallservices" element={<GetAllServices />} />
+        <Route path="/adminmanage" element={<AdminManage />} />
+        <Route path="/allinfo" element={<AllInfo />} />
       </Routes>
     </div>
   );

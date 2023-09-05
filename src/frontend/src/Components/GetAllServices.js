@@ -1,41 +1,18 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 
-export default function BusinessComp() {
+export default function GetAllServices() {
   const [services, setServices] = useState([]);
-  const [business, setBusiness] = useState({});
-
-  const id = JSON.parse(localStorage.getItem("loggedUser"));
-
-  const getServices = () => {
-    fetch(`https://localhost:7176/getBusinessServices/${id.id}`)
-      .then((resp) => resp.json())
-      .then((services) => setServices(services));
-  };
-
-  const getBusiness = (id) => {
-    fetch(`https://localhost:7176/getbusinessbylogin/${id.id}`)
-      .then((resp) => resp.json())
-      .then((business) => setBusiness(business));
-    console.log(business);
-  };
 
   useEffect(() => {
-    getServices();
-    getBusiness(id);
+    fetch(`http://localhost:8080/getallservices`)
+      .then((resp) => resp.json())
+      .then((services) => setServices(services));
   }, []);
 
-  const deleteService = async (id) => {
-    console.log("Item deleted");
-    await axios.delete(`https://localhost:7176/api/BuisnessServices/${id}`);
-    getServices();
-  };
   return (
     <div>
-      <h1>IN Business Class </h1>
       <div style={{ textAlign: "center" }}>
-        <h1>Catering Services</h1>
+        <h1>List of All services Registered By Buisnesses on the System </h1>
 
         <table
           style={{
@@ -60,7 +37,7 @@ export default function BusinessComp() {
                 Price
               </th>
               <th style={{ border: "1px solid #ccc" }} scope="col">
-                Delete
+                Business Name
               </th>
             </tr>
           </thead>
@@ -71,28 +48,11 @@ export default function BusinessComp() {
                 <td style={{ border: "1px solid #ccc" }}>{v.name}</td>
                 <td style={{ border: "1px solid #ccc" }}>{v.description}</td>
                 <td style={{ border: "1px solid #ccc" }}>{v.price}</td>
-
-                <td>
-                  <button
-                    className="btn btn-outline-primary mx-2"
-                    onClick={() => deleteService(v.id)}
-                  >
-                    Delete
-                  </button>
-                </td>
+                <td style={{ border: "1px solid #ccc" }}>{v.business.name}</td>
               </tr>
             ))}
           </tbody>
         </table>
-      </div>
-
-      <div>
-        <Link
-          to={`/addservice/${business.id}`}
-          className="btn btn-outline-primary mx-2"
-        >
-          Add New Service
-        </Link>
       </div>
     </div>
   );

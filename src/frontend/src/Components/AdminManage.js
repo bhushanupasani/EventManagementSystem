@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-export default function Admin() {
+export default function AdminManage() {
   return (
     <div>
       <h1>This is Admin Portal !</h1>

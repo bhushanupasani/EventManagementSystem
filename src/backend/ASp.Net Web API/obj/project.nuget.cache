@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LgvkV2AJzGmXNof+x5S1O8P8o/FtUU2Hxt0uFRelT/UWH2hJQ9Cstw6dPHnbOM8FiJzrNLs3tHGEtMmoIllmdA==",
+  "dgSpecHash": "vIQtRnfEiOP9FGW+VFazkCrCuHlOuyUgouLbzjnfLMBTmYt4hgNsLpYry/ecr9z984AzAdnpKEt5x1opnMjvzw==",
   "success": true,
-  "projectFilePath": "H:\\CDAC PG-DAC\\Proect Repo\\EventManagementSystem\\src\\backend\\OnlineEventManagementSystem\\OnlineEventManagementSystem.csproj",
+  "projectFilePath": "H:\\CDAC PG-DAC\\Proect Repo\\EventManagementSystem\\src\\backend\\ASp.Net Web API\\OnlineEventManagementSystem.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Bhushan Upasani\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\Bhushan Upasani\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

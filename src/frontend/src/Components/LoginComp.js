@@ -44,7 +44,7 @@ export default function LoginComp() {
           } else if (obj.userTypeId === 2) {
             navigate("/business");
           } else if (obj.userTypeId == 3) {
-            navigate("/admin");
+            navigate("/adminhome");
           }
         }
       });

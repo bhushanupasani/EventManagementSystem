@@ -20,7 +20,6 @@ export default function ClientComp() {
     transition: "background-color 0.3s ease-in-out",
   };
 
-
   return (
     <div>
       <h4>We are here to provide services and the best to clients</h4>

@@ -11395,11 +11395,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\CDAC PG-DAC\\Proect Repo\\EventManagementSystem\\src\\backend\\OnlineEventManagementSystem\\OnlineEventManagementSystem.csproj",
+      "projectUniqueName": "H:\\CDAC PG-DAC\\Proect Repo\\EventManagementSystem\\src\\backend\\ASp.Net Web API\\OnlineEventManagementSystem.csproj",
       "projectName": "OnlineEventManagementSystem",
-      "projectPath": "H:\\CDAC PG-DAC\\Proect Repo\\EventManagementSystem\\src\\backend\\OnlineEventManagementSystem\\OnlineEventManagementSystem.csproj",
+      "projectPath": "H:\\CDAC PG-DAC\\Proect Repo\\EventManagementSystem\\src\\backend\\ASp.Net Web API\\OnlineEventManagementSystem.csproj",
       "packagesPath": "C:\\Users\\Bhushan Upasani\\.nuget\\packages\\",
-      "outputPath": "H:\\CDAC PG-DAC\\Proect Repo\\EventManagementSystem\\src\\backend\\OnlineEventManagementSystem\\obj\\",
+      "outputPath": "H:\\CDAC PG-DAC\\Proect Repo\\EventManagementSystem\\src\\backend\\ASp.Net Web API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Bhushan Upasani\\AppData\\Roaming\\NuGet\\NuGet.Config",

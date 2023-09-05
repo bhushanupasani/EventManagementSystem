@@ -2,7 +2,7 @@ import { useReducer } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function ClientRegister() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const init = {
     id: 1,
     username: "",

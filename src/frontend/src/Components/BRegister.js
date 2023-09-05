@@ -1,4 +1,4 @@
-import {useReducer} from "react";
+import { useReducer } from "react";
 export default function BusinessRegister() {
   const init = {
     id: 1,
