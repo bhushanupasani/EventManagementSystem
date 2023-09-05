@@ -8,25 +8,25 @@ export default function About() {
     border: "1px solid #ccc",
     borderRadius: "8px",
     boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
-    textAlign: "center"
+    textAlign: "center",
   };
 
   const ownerNameStyle = {
     fontSize: "24px",
     fontWeight: "bold",
-    marginBottom: "10px"
+    marginBottom: "10px",
   };
 
   const emailStyle = {
     color: "#007bff",
     textDecoration: "none",
     display: "block",
-    marginBottom: "10px"
+    marginBottom: "10px",
   };
 
   const contactStyle = {
     fontSize: "16px",
-    fontWeight: "bold"
+    fontWeight: "bold",
   };
 
   return (

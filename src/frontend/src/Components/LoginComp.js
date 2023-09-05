@@ -1,12 +1,14 @@
-import { useEffect, useReducer, useState } from "react";
+import { useReducer, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function LoginComp() {
   const navigate = useNavigate();
+  const errorContainer = document.querySelector("#error-message");
+
   const [msg, setMsg] = useState();
   const init = {
     Username: "",
-    Password: ""
+    Password: "",
   };
   const reducer = (state, action) => {
     switch (action.type) {
@@ -19,13 +21,12 @@ export default function LoginComp() {
     }
   };
   const [info, dispatch] = useReducer(reducer, init);
-  const [trainer, viewTrainer] = useState([]);
   const sendData = (e) => {
     e.preventDefault();
     const reqOptions = {
       method: "POST",
       headers: { "content-type": "application/json" },
-      body: JSON.stringify(info)
+      body: JSON.stringify(info),
     };
     fetch("https://localhost:7176/chkLogin", reqOptions)
       .then((resp) => {
@@ -42,10 +43,11 @@ export default function LoginComp() {
             navigate("/clientpage");
           } else if (obj.userTypeId === 2) {
             navigate("/business");
+          } else if (obj.userTypeId == 3) {
+            navigate("/admin");
           }
         }
-      })
-      .catch((error) => alert("server error. Try after some time"));
+      });
   };
 
   return (
@@ -70,7 +72,7 @@ export default function LoginComp() {
                       dispatch({
                         type: "update",
                         fld: "Username",
-                        val: e.target.value
+                        val: e.target.value,
                       })
                     }
                   />
@@ -92,7 +94,7 @@ export default function LoginComp() {
                       dispatch({
                         type: "update",
                         fld: "Password",
-                        val: e.target.value
+                        val: e.target.value,
                       })
                     }
                   />

@@ -5,7 +5,7 @@ export default function ClientComp() {
   const buttonContainerStyle = {
     display: "flex",
     justifyContent: "space-between",
-    marginTop: "20px"
+    marginTop: "20px",
   };
 
   const customButtonStyle = {
@@ -17,12 +17,9 @@ export default function ClientComp() {
     fontSize: "16px",
     textDecoration: "none",
     cursor: "pointer",
-    transition: "background-color 0.3s ease-in-out"
+    transition: "background-color 0.3s ease-in-out",
   };
 
-  const customButtonHoverStyle = {
-    backgroundColor: "#0056b3"
-  };
 
   return (
     <div>
@@ -32,24 +29,24 @@ export default function ClientComp() {
         <Link
           to={`/decoration`}
           style={customButtonStyle}
-          onMouseOver={e => (e.target.style.backgroundColor = "#0056b3")}
-          onMouseOut={e => (e.target.style.backgroundColor = "#007bff")}
+          onMouseOver={(e) => (e.target.style.backgroundColor = "#0056b3")}
+          onMouseOut={(e) => (e.target.style.backgroundColor = "#007bff")}
         >
           Decoration
         </Link>
         <Link
           to={`/catering`}
           style={customButtonStyle}
-          onMouseOver={e => (e.target.style.backgroundColor = "#0056b3")}
-          onMouseOut={e => (e.target.style.backgroundColor = "#007bff")}
+          onMouseOver={(e) => (e.target.style.backgroundColor = "#0056b3")}
+          onMouseOut={(e) => (e.target.style.backgroundColor = "#007bff")}
         >
           Catering
         </Link>
         <Link
           to={`/venue`}
           style={customButtonStyle}
-          onMouseOver={e => (e.target.style.backgroundColor = "#0056b3")}
-          onMouseOut={e => (e.target.style.backgroundColor = "#007bff")}
+          onMouseOver={(e) => (e.target.style.backgroundColor = "#0056b3")}
+          onMouseOut={(e) => (e.target.style.backgroundColor = "#007bff")}
         >
           Venue
         </Link>
