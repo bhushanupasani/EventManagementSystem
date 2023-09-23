@@ -8,3 +8,7 @@ and requirement gathering to deployment & maintenance. In this system, we store 
 MySQL to ensure efficient data storage, retrieval and integrity. In this web application, we use front-ent technology
 ReactJS for the best look & feel. In this web application, we use back-end technologies such as Spring-Boot and
 Dot Net Technologies to create Restful Api for server side to fetch data and insert data into the database.
+
+# Technology Stack
+Java, .NET MVC, Spring Boot REST API,
+React JS, MySQL
